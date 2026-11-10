@@ -1,0 +1,9 @@
+[package]
+name = "vault-gui"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+eframe = "0.37"
+rfd = "0.18"

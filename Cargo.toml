@@ -1,0 +1,30 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/vault-protocol",
+    "crates/vault-env",
+    "crates/vault-plugin",
+    "crates/vault-host",
+    "crates/vault-bridge",
+    "crates/vault-cli",
+    "crates/ipc-bench",
+    "crates/vst3-inspect",
+    "vault-gui",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[workspace.dependencies]
+vault-protocol = { path = "crates/vault-protocol" }
+vault-env = { path = "crates/vault-env" }
+vault-plugin = { path = "crates/vault-plugin" }
+windows-sys = "0.61"
+vst3 = "0.3"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+panic = "abort"

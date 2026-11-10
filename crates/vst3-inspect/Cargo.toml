@@ -1,0 +1,9 @@
+[package]
+name = "vst3-inspect"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+vst3.workspace = true
+vault-plugin.workspace = true

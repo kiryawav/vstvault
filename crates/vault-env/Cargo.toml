@@ -1,0 +1,27 @@
+[package]
+name = "vault-env"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[lib]
+name = "vault_env"
+crate-type = ["rlib", "cdylib"]
+
+[[bin]]
+name = "vault-run"
+path = "src/bin/vault_run.rs"
+
+[dependencies.windows-sys]
+workspace = true
+features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Memory",
+    "Win32_System_SystemInformation",
+    "Win32_System_SystemServices",
+    "Win32_System_Threading",
+]

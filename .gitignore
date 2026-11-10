@@ -1,0 +1,5 @@
+target/
+deploy/
+/*.exe
+/scripts/build_gui.ps1
+results/

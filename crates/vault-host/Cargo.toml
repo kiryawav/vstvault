@@ -1,0 +1,14 @@
+[package]
+name = "vault-host"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+vault-env.workspace = true
+vault-protocol.workspace = true
+vault-plugin.workspace = true
+
+[dependencies.windows-sys]
+workspace = true
+features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging"]
